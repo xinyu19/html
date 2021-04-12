@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> CSS Style</title>
+
+<head>
+    <!-- Linking -->
+    <link rel="stylesheet" href="style/str.css">
+    <!-- Embedding -->
+    <style>
+        /* universal Selecter */
+        /* * {
+            text-align: center;
+        } */
+
+
+        /* Type Selecter */
+        /* h1 {color: red; text-decoration: underline;}
+        h2 {color:lightsalmon;}
+        h3 {color: green;} */
+
+        /* class Selecter */
+        /* .str1{
+            color: red; text-decoration: underline;
+        }
+        h2.str2{
+            color:lightsalmon;
+        } */
+
+        /* ID Selecter */
+        /* #theH1{
+            color:thistle;
+            text-transform: capitalize;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- Inline -->
+    <!-- <h1 style="color:red; text-decoration: underline;"> Apple</h1> -->
+
+    <!-- Embedding & Link -->
+    <!-- Type Selecter -->
+    <h1> Apple </h1>
+    <h2> Melon </h2>
+    <h3> Lemon </h3>
+    <!-- class Selecter -->
+    <h1 class="str1"> Apple </h1>
+    <h2 class="str2"> Melon </h2>
+    <h3 class="str2"> Lemon </h3>
+    <h1 class="str1 str3"> Apple </h1>
+    <h1 class="str3 str1"> Apple </h1>
+    <h1 class="str3" id="str4">Apple</h1>
+    <h1 style="color:blueviolet" class="str3" id="str4">Apple</h1>
+    <!-- ID Selecter -->
+    <h1 id="theH1"> this is id selecter</h1>
+    <!-- <h2 id="theH1"> this is id selecter</h2> -->
+    <script>
+        theH1.style.color = "blue";
+    </script>
+</body>
+
+</html>

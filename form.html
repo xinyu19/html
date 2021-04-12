@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form element</title>
+    <style>
+        .str1 {
+            width: 450px;
+            border-bottom: 1.5px dotted slategray;
+            margin: 20px;
+            padding-bottom: 5px;
+        }
+
+        .bot {
+            width: 450px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .str2 {
+            width: 100px;
+            float: left;
+            text-align: right;
+        }
+
+        fieldset {
+            width: 500px;
+            margin: 20px;
+            border-color: rgb(241, 208, 241);
+            border-radius: 5px 10px;
+        }
+
+        legend {
+            color: rgb(37, 163, 151);
+            font-size: 20px;
+            font-family: 標楷體;
+            font-style: italic;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="GET" enctype="multipart/form-data">
+        <fieldset>
+            <legend> 個人資料 </legend>
+            <div class="str1">
+                <label class="str2" for="account"> 姓名: </label>
+                <!-- <input type="text" name="account" id="account" size="10" value='guest'> -->
+                <input type="text" name="account" id="account" size="10" autofocus autocomplete="off"
+                    placeholder='guest'>
+            </div>
+            <div class="str1">
+                <label for="" class="str2">性別: </label>
+                <input type="radio" name="gender" id="male">
+                <label for="male">男</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">女</label>
+            </div>
+            <div class="str1">
+                <label class="str2" for="pwd"> 密碼: </label>
+                <input type="password" name="password" id="pwd" maxlength="8" required="required">
+            </div>
+            <div class="str1">
+                <label class="str2" for="id">身分證字號: </label>
+                <input type="text" name="id" id="id" maxlength="10" pattern="[a-zA-Z]{1}[1-2]{1}\d{8}"
+                    autocomplete="off">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>地址</legend>
+            <div class="str1">
+                <label class="str2" for="city"> 縣市: </label>
+                <select name="city" id="city" multiple>
+                    <option value="TPE">台北市</option>
+                    <option selected value="TYU">桃園市</option>
+                    <option value="TPH">新北市</option>
+                    <option value="HSC">新竹市</option>
+                </select>
+            </div>
+            <div class="str1">
+                <label for="add" class="str2">地址:</label>
+                <input type="text" name="add">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>個人資料二</legend>
+            <div class="str1">
+                <label for="" class="str2">Blog:</label>
+                <input type="url" name="hp" list="hpurls" value="http://">
+                <!-- value 會有問題，有可能以https:// 為開頭-->
+                <datalist id="hpurls">
+                    <!-- 3 ways for option -->
+                    <option value="http://www.google.com">Google</option>
+                    <option value="http://www.pchome.com.tw"></option>
+                    <option value="http://tw.yahoo.com"></option>
+                </datalist>
+            </div>
+            <div class="str1">
+                <label for="" class="str2"> 興趣: </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="music"> 音樂
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="sports"> 運動
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="reading"> 閱讀
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="movie"> 電影
+                </label>
+            </div>
+            <div class="str1">
+                <label for="" class="str2">照片: </label>
+                <input type="file" name="file1">
+            </div>
+
+            <div class="str1">
+                <label class="str2" for="memo">意見: </label>
+                <textarea cols="30" rows="5" name="memo" id="memo"></textarea>
+            </div>
+        </fieldset>
+
+        <div class="bot">
+            <input type="submit" value="送出">
+            <input type="reset" value="清除">
+        </div>
+    </form>
+</body>
+
+</html>
