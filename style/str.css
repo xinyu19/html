@@ -1,0 +1,40 @@
+/* universal Selecter */
+* {
+  text-align: center;
+}
+
+/* Type Selecter */
+h1 {
+  color: red;
+  text-decoration: underline;
+}
+h2 {
+  color: lightsalmon;
+}
+h3 {
+  color: green;
+}
+
+/* class Selecter */
+.str1 {
+  color: slateblue;
+}
+h2.str2 {
+  color: blue;
+  text-decoration: underline;
+}
+.str3 {
+  color: violet;
+  font-style: italic;
+}
+
+/* ID Selecter */
+#theH1 {
+  color: thistle;
+  text-transform: uppercase;
+}
+#str4 {
+  color: rgb(42, 218, 42);
+  font-style: normal;
+  text-decoration: none;
+}
